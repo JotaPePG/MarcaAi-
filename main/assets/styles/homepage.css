@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --b1: #fff5db;
+  --p1: #404040;
+  --c1: #b5b5b5;
+  --b2: #ffeab2;
+  --b3: #ffe49a;
+  --v1: #ae2012;
+  --a1: #ee9b00;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: white;
+  height: 100%;
+  position: relative;
+  font-family: Montserrat Alternates;
+}
+
+p {
+  font-family: Montserrat Alternates;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.homebtns {
+  padding: 30px 20px;
+  bottom: 0;
+  background-color: var(--b1);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.homebtns .homebtn {
+  height: 48px;
+  width: 48px;
+  border: none;
+  background-color: var(--b1);
+}
+
+.homebtns .homebtn svg {
+  height: 100%;
+  width: 100%;
+}
+
+.homebtn {
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  width: 70%;
+  height: 3px;
+  background-color: var(--p1);
+  position: absolute;
+  bottom: -10px;
+  left: 15%;
+  border-radius: 10px;
+}
+
+form {
+  width: 90%;
+  background-color: var(--b1);
+  border-radius: 50px;
+  position: absolute;
+  left: 5%;
+  top: 40px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  border: none;
+  background-color: var(--b1);
+  border-radius: 50px;
+  padding-left: 20px;
+  width: 80%;
+  outline: none;
+}
+
+form button {
+  border: none;
+  background-color: var(--b1);
+  border-radius: 50px;
+  padding-right: 20px;
+}
+
+.map {
+  max-width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.bar_search {
+  width: 100%;
+  height: 30px;
+  background-color: var(--b1);
+  border-radius: 50px 50px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar_search div {
+  width: 71px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: var(--p1);
+}
+
+.atv_search {
+  background-color: var(--b1);
+  height: 200px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  height: 100%;
+  padding: 10px 0;
+}
+
+.grid button {
+  border: none;
+  height: 100%;
+  border-radius: 15px;
+  background-color: var(--b2);
+}
+
+.grid button:hover {
+  background-color: var(--b3);
+}
