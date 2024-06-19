@@ -25,6 +25,7 @@ body {
   height: 100%;
   position: relative;
   font-family: Montserrat Alternates;
+  background-color: var(--b1);
 }
 
 p {
@@ -34,6 +35,10 @@ p {
 .container {
   display: flex;
   justify-content: space-between;
+}
+
+.block1 {
+  padding: 40px 20px;
 }
 
 .block2 {
@@ -83,83 +88,44 @@ p {
   border-radius: 10px;
 }
 
-form {
-  width: 90%;
-  background-color: var(--b1);
-  border-radius: 50px;
-  position: absolute;
-  left: 5%;
-  top: 40px;
-  height: 50px;
+h2 {
+  color: var(--accent-color);
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.matches-list {
+  list-style-type: none;
+}
+
+.match-item {
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
-  z-index: 1;
-}
-
-form input {
-  border: none;
-  background-color: var(--b1);
-  border-radius: 50px;
-  padding-left: 20px;
-  width: 80%;
-  outline: none;
-}
-
-form button {
-  border: none;
-  background-color: var(--b1);
-  border-radius: 50px;
-  padding-right: 20px;
-}
-
-#map {
-  width: 100%;
-  height: 900px;
-  z-index: 0;
-}
-
-.bar_search {
-  width: 100%;
-  height: 30px;
-  background-color: var(--b1);
-  border-radius: 50px 50px 0 0;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.bar_search div {
-  width: 71px;
-  height: 3px;
-  border-radius: 50px;
-  background-color: var(--p1);
+.match-item:hover {
+  background-color: #f7f7f7;
 }
 
-.atv_search {
-  background-color: var(--b1);
-  height: 200px;
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: none;
+.match-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
-  height: 100%;
-  padding: 10px 0;
+.match-info {
+  flex: 1;
 }
 
-.grid button {
-  border: none;
-  height: 100%;
-  border-radius: 15px;
-  background-color: var(--b2);
-}
-
-.grid button:hover {
-  background-color: var(--b3);
+.match-info p {
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
 }

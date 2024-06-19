@@ -177,3 +177,12 @@ body {
 form {
   width: 100%;
 }
+
+@media (max-width: 600px) {
+  .block1 {
+    display: none;
+  }
+  body {
+    grid-template-columns: 1fr;
+  }
+}

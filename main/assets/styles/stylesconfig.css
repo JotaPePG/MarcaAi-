@@ -21,19 +21,66 @@ html {
 }
 
 body {
-  background-color: white;
   height: 100%;
   position: relative;
   font-family: Montserrat Alternates;
+  background-color: var(--b1);
 }
 
 p {
   font-family: Montserrat Alternates;
 }
 
+.head {
+  display: flex;
+  flex-direction: row;
+  padding: 40px 20px;
+}
+
+.head img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.btn_container {
+  padding: 20px;
+}
+
+button {
+  border: none;
+  width: 100%;
+  height: 50px;
+  background-color: var(--b1);
+  font-family: Montserrat Alternates;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: var(--b2);
+}
+
 .container {
   display: flex;
   justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.configs {
+  width: 100%;
+}
+
+.block1 {
+  padding: 40px 20px;
 }
 
 .block2 {
@@ -81,85 +128,4 @@ p {
   bottom: -10px;
   left: 15%;
   border-radius: 10px;
-}
-
-form {
-  width: 90%;
-  background-color: var(--b1);
-  border-radius: 50px;
-  position: absolute;
-  left: 5%;
-  top: 40px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
-}
-
-form input {
-  border: none;
-  background-color: var(--b1);
-  border-radius: 50px;
-  padding-left: 20px;
-  width: 80%;
-  outline: none;
-}
-
-form button {
-  border: none;
-  background-color: var(--b1);
-  border-radius: 50px;
-  padding-right: 20px;
-}
-
-#map {
-  width: 100%;
-  height: 900px;
-  z-index: 0;
-}
-
-.bar_search {
-  width: 100%;
-  height: 30px;
-  background-color: var(--b1);
-  border-radius: 50px 50px 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bar_search div {
-  width: 71px;
-  height: 3px;
-  border-radius: 50px;
-  background-color: var(--p1);
-}
-
-.atv_search {
-  background-color: var(--b1);
-  height: 200px;
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: none;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
-  height: 100%;
-  padding: 10px 0;
-}
-
-.grid button {
-  border: none;
-  height: 100%;
-  border-radius: 15px;
-  background-color: var(--b2);
-}
-
-.grid button:hover {
-  background-color: var(--b3);
 }

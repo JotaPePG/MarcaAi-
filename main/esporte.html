@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partida de Futebol</title>
+  <link rel="stylesheet" href="assets/styles/esporte.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="football-info">
+      <h2>Partida de Futebol</h2>
+      <img src="assets/img/quadra.jpeg" alt="Quadra de Futebol">
+      <p><strong>Horário:</strong> 19:00</p>
+      <p><strong>Local:</strong> Quadra 101</p>
+      <button id="confirmar-presenca">CONFIRMAR PRESENÇA</button>
+      <a href="homepage.html" class="voltar-btn">Voltar ao Homepage</a>
+    </div>
+  </div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Seleciona o botão de "Confirmar Presença"
+    const confirmarPresencaBtn = document.getElementById('confirmar-presenca');
+
+    // Adiciona um evento de clique ao botão
+    confirmarPresencaBtn.addEventListener('click', function () {
+      // Obtém as informações da partida
+      const horario = "19:00"; // Você pode obter isso dinamicamente se necessário
+      const local = "Quadra 101"; // Você pode obter isso dinamicamente se necessário
+      const tipoEsporte = "Futebol"; // Você pode obter isso dinamicamente se necessário
+      const imagemQuadra = "assets/img/quadra.jpeg"; // Caminho da imagem da quadra de futebol
+
+      // Cria um objeto com as informações da partida
+      const partida = {
+        horario: horario,
+        local: local,
+        tipoEsporte: tipoEsporte,
+        imagemQuadra: imagemQuadra
+      };
+
+      // Verifica se já existem partidas armazenadas
+      let partidas = JSON.parse(localStorage.getItem('partidasFutebol')) || [];
+
+      // Adiciona a nova partida ao array de partidas
+      partidas.push(partida);
+
+      // Armazena o array de partidas no localStorage
+      localStorage.setItem('partidasFutebol', JSON.stringify(partidas));
+
+      // Redireciona para a página inicial
+      window.location.href = 'homepage.html';
+    });
+  </script>
+</body>
+
+</html>

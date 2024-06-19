@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-bg-color: #fff5db;
+  --primary-text-color: #404040;
+  --secondary-text-color: #b5b5b5;
+  --button-bg-color: #ffeab2;
+  --button-hover-color: #ffe49a;
+  --accent-color: #ae2012;
+  --link-color: #ee9b00;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.football-info {
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+}
+
+.football-info h2 {
+  color: var(--accent-color);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.football-info img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.football-info p {
+  color: var(--secondary-text-color);
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #404040;
+}
+
+button {
+  border: none;
+  background-color: var(--button-bg-color);
+  color: var(--primary-text-color);
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.voltar-btn {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.voltar-btn:hover {
+  color: darken(var(--link-color), 10%);
+}

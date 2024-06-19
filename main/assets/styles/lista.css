@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-bg-color: #fff5db;
+  --primary-text-color: #404040;
+  --secondary-text-color: #b5b5b5;
+  --accent-color: #ae2012;
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+h2 {
+  color: var(--accent-color);
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.matches-list {
+  list-style-type: none;
+}
+
+.match-item {
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.match-item:hover {
+  background-color: #f7f7f7;
+}
+
+.match-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.match-info {
+  flex: 1;
+}
+
+.match-info p {
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+}
